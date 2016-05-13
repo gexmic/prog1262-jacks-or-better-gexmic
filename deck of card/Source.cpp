@@ -1,9 +1,19 @@
-#include <iostream>
-#include <set>
-#include <vector>
-#include "Card.h"
-#include "Deck.h"
-#include "Hand.h"
+///////////////////////////////////////////////////////////////////////
+// File:  Jack or Bette Games
+//
+// Author: Michael Landry
+// This assignment represents my own work and is in accordance with the College Academic Policy
+//
+// Copyright (c) 2016 All Right Reserved by Michael Landry
+// Contributors: 
+// Description:  This is the game of poker Jack or Better, this programme simulate 5 card poker hand
+// and the player is able to change any card for a redraw and have new card. the player win if I have a pair of jack or better
+//
+// Date: mai 13 2016
+// Revisions:
+//
+/////////////////////////////////////////////////////////////////////#include <iostream>
+
 #include "Play.h"
 
 using std::cout;
@@ -11,55 +21,9 @@ using std::cin;
 
 int main()
 {
-
-	Deck deck;
-	Hand hand;
 	Play pokerGame;
 
 	pokerGame.playgame();
 
-	/*while (!deck.isEmpty())
-	{
-		std::cout << deck.draw()->toString() << std::endl;
-	}*/
-	/*for (int j = 0; j < 100; ++j)
-	{
-		for (int i = 0; i < 5; ++i)
-		{
-			std::cout << deck.draw()->toString() << " ";
-		}
-		std::cout << std::endl;
-		deck.shuffle();
-	}*/
-
-	
-		/*	deck.shuffle();
-	while (hand.size() < 5)
-	{
-		hand.addCard(deck.draw());
-	}
-
-	std::cout << hand.toString() << std::endl;
-	hand.isPair();*/
-	
-		/*do 
-		{
-			hand.clear();
-			
-			deck.shuffle();
-			
-			while (hand.size() < 5)
-			{
-				hand.addCard(deck.draw());
-			}
-			std::cout << hand.toString() << std::endl;
-			
-		} while (hand.isPair()== false);*/
-
-
-
-		
-
-
-		system("pause");
+	system("pause");
 }

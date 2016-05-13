@@ -1,5 +1,22 @@
-﻿#include "Card.h"
+﻿///////////////////////////////////////////////////////////////////////
+// File:  Jack or Bette Games
+//
+// Author: Michael Landry
+// This assignment represents my own work and is in accordance with the College Academic Policy
+//
+// Copyright (c) 2016 All Right Reserved by Michael Landry
+// Contributors: 
+// Description:  This is the game of poker Jack or Better, this programme simulate 5 card poker hand
+// and the player is able to change any card for a redraw and have new card. the player win if I have a pair of jack or better
+//
+// Date: mai 13 2016
+// Revisions:
+//
+/////////////////////////////////////////////////////////////////////
 
+#include "Card.h"
+
+// function to put the card to a string FaceName and SuitName
 std::string Card::toString() const
 {
 	return faceNames.at(face) + " of " + suitNames.at(suit);
@@ -8,13 +25,14 @@ std::string Card::toString() const
 
 
 
-
+// initialize the different Suit
 const std::set<Suit> Card::suits{
 	Suit::CLUB,
 	Suit::DIAMOND, 
 	Suit::HEART, 
 	Suit::SPADE };
 
+// initialize the different Face
 const std::set<Face> Card::faces{
 	Face::ACE,
 	Face::TWO,
@@ -30,6 +48,7 @@ const std::set<Face> Card::faces{
 	Face::QUEEN,
 	Face::KING };
 
+// map to set the name of the Face
 const std::map<Face, std::string> Card::faceNames{
 {Face::ACE, "A"},
 {Face::TWO, "2"},
@@ -46,6 +65,7 @@ const std::map<Face, std::string> Card::faceNames{
 {Face::KING, "K"}
 };
 
+// map to set the name of the suit
 const std::map<Suit, std::string> Card::suitNames{
 	{Suit::HEART, "heart"},
 	{Suit::DIAMOND, "diamond"},
@@ -53,6 +73,7 @@ const std::map<Suit, std::string> Card::suitNames{
 	{Suit::SPADE, "spade"}
 };
 
+//operator overLoad for the cout
 std::ostream & operator<<(std::ostream & os, Card & c)
 {
 	os << c.toString();
